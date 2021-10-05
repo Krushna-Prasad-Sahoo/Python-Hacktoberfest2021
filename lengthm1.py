@@ -1,5 +1,5 @@
 # Python code to demonstrate string length
 # using len
 
-str = "python"
+str = "Hello"
 print(len(str))
