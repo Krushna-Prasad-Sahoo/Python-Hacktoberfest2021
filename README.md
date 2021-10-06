@@ -5,3 +5,9 @@
 - LinkedList.py
 - doubleLinkedList.py
 - stringreverse.py
+#### Python String Exercises:
+- Using the built-in function len
+  - - lengthm1.py
+  - - lengthm2.py
+  - - lengthm3.py
+  - - lengthm4.py
