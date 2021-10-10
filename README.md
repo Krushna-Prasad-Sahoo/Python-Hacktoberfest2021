@@ -1,13 +1,1 @@
-### DSA_python_practice
-#### this repos contains DSA_python_pratice
-#### list of programs available here :
-- BinaryTree.py
-- LinkedList.py
-- doubleLinkedList.py
-- stringreverse.py
-#### Python String Exercises:
-- Using the built-in function len
-  - - lengthm1.py
-  - - lengthm2.py
-  - - lengthm3.py
-  - - lengthm4.py
+![Python-Hacktoberfest2021](https://socialify.git.ci/Krushna-Prasad-Sahoo/Python-Hacktoberfest2021/image?description=1&descriptionEditable=A%20beginner%20friendly%20repository%20for%20Hacktoberfest%202021%20where%20you%20can%20contribute%20programs%20in%20Python.&forks=1&issues=1&language=1&pulls=1&stargazers=1&theme=Dark)
