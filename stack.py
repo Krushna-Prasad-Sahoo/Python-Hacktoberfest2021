@@ -26,13 +26,15 @@ print(stack)
 # []
 
 
-# IMPLEMENTING STACK OPERATIONS 
+# IMPLEMENTING STACK OPERATIONS
 stack = []
+
 
 def push():
     element = input("enter the element")
     stack.append(element)
     print(stack)
+
 
 def pop_elment():
     if not stack:
@@ -40,22 +42,20 @@ def pop_elment():
 
     else:
         e = stack.pop()
-        print("removed element",e)
+        print("removed element", e)
         print(stack)
+
 
 while True:
     print("the select the operation 1.push 2.pop 3.quit")
     choice = int(input())
-    if choice==1:
+    if choice == 1:
         push()
-    elif choice==2:
+    elif choice == 2:
         pop_element()
 
-    elif choice==3:
+    elif choice == 3:
         break
 
     else:
         print("please select valid operation")
-        
-        
-        

@@ -9,13 +9,15 @@ def solve(A, tem, p, res):
             solve(A, tem, i + 1, res)
             tem.pop()
     return
-    
+
+
 def subsets(A):
     res = []
     solve(sorted(A), [], 0, res)
     res = [i for i in res]
     res.remove([])
     return "\n".join(" ".join(str(j) for j in i) for i in res)
+
 
 if __name__ == "__main__":
     t = int(input())

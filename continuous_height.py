@@ -1,16 +1,18 @@
 import doctest
 
+
 class Node(object):
-    def __init__(self, element : int) -> None:
+    def __init__(self, element: int) -> None:
         self.data = element
         self.left = None
         self.right = None
 
+
 class BST:
-    def __init__(self) -> None: 
+    def __init__(self) -> None:
         self.root = None
 
-    def create(self, insert_element : int) -> None:  
+    def create(self, insert_element: int) -> None:
         if self.root == None:
             self.root = Node(insert_element)
         else:
@@ -31,10 +33,12 @@ class BST:
                 else:
                     break
 
-def height_of_tree(root : Node) -> int:
+
+def height_of_tree(root: Node) -> int:
     if not root:
         return -1
     return 1 + max(height_of_tree(root.right), height_of_tree(root.left))
+
 
 def bst_height() -> None:
     t = int(input())
@@ -44,8 +48,9 @@ def bst_height() -> None:
         tree = BST()
         for i in range(n):
             tree.create(ar[i])
-            print(height_of_tree(tree.root), end =" ") 
+            print(height_of_tree(tree.root), end=" ")
         print()
+
 
 if __name__ == "__main__":
     doctest.testmod()

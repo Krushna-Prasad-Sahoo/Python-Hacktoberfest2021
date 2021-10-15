@@ -1,14 +1,13 @@
 graph = {
-
-    'A': ['B', 'C'],
-    'B': ['A', 'D', 'F'],
-    'C': ['A', 'E'],
-    'D': ['B', 'I'],
-    'E': ['C', 'F', 'G'],
-    'F': ['B', 'E', 'G'],
-    'G': ['F', 'K'],
-    'I': ['K'],
-    'K': ['I', 'G']
+    "A": ["B", "C"],
+    "B": ["A", "D", "F"],
+    "C": ["A", "E"],
+    "D": ["B", "I"],
+    "E": ["C", "F", "G"],
+    "F": ["B", "E", "G"],
+    "G": ["F", "K"],
+    "I": ["K"],
+    "K": ["I", "G"],
 }
 
 visited = []
@@ -20,7 +19,7 @@ def bfs(graph, visited, node):
     queue.append(node)
 
     while queue:
-       # print(queue)
+        # print(queue)
         s = queue.pop(0)
         print(s)
 
@@ -30,4 +29,4 @@ def bfs(graph, visited, node):
                 queue.append(neighbour)
 
 
-bfs(graph, visited, 'A')
+bfs(graph, visited, "A")
