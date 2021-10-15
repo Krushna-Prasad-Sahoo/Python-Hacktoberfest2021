@@ -1,33 +1,59 @@
-def mergeSort(nlist):
-    print("Splitting ",nlist)
-    if len(nlist)>1:
-        mid = len(nlist)//2
-        lefthalf = nlist[:mid]
-        righthalf = nlist[mid:]
+def merge_sort(list1, left_index, right_index):  
+    if left_index >= right_index:  
+        return  
+  
+    middle = (left_index + right_index)//2  
+    merge_sort(list1, left_index, middle)  
+    merge_sort(list1, middle + 1, right_index)  
+    merge(list1, left_index, right_index, middle)  
+  
+  
+    # Defining a function for merge the list  
+def merge(list1, left_index, right_index, middle):  
+  
+  
+   # Creating subparts of a lists  
+    left_sublist = list1[left_index:middle + 1]  
+    right_sublist = list1[middle+1:right_index+1]  
+  
+    # Initial values for variables that we use to keep  
+    # track of where we are in each list1  
+    left_sublist_index = 0  
+    right_sublist_index = 0  
+    sorted_index = left_index  
+  
+    # traverse both copies until we get run out one element  
+    while left_sublist_index < len(left_sublist) and right_sublist_index < len(right_sublist):  
+  
+        # If our left_sublist has the smaller element, put it in the sorted  
+        # part and then move forward in left_sublist (by increasing the pointer)  
+        if left_sublist[left_sublist_index] <= right_sublist[right_sublist_index]:  
+            list1[sorted_index] = left_sublist[left_sublist_index]  
+            left_sublist_index = left_sublist_index + 1  
+        # Otherwise add it into the right sublist  
+        else:  
+            list1[sorted_index] = right_sublist[right_sublist_index]  
+            right_sublist_index = right_sublist_index + 1  
+  
+  
+        # move forward in the sorted part  
+        sorted_index = sorted_index + 1  
+  
+       
+    # we will go through the remaining elements and add them  
+    while left_sublist_index < len(left_sublist):  
+        list1[sorted_index] = left_sublist[left_sublist_index]  
+        left_sublist_index = left_sublist_index + 1  
+        sorted_index = sorted_index + 1  
+  
+    while right_sublist_index < len(right_sublist):  
+        list1[sorted_index] = right_sublist[right_sublist_index]  
+        right_sublist_index = right_sublist_index + 1  
+        sorted_index = sorted_index + 1  
+  
+list1 = [44, 65, 2, 3, 58, 14, 57, 23, 10, 1, 7, 74, 48]  
+merge_sort(list1, 0, len(list1) -1)  
+print(list1)  
 
-        mergeSort(lefthalf)
-        mergeSort(righthalf)
-        i=j=k=0       
-        while i < len(lefthalf) and j < len(righthalf):
-            if lefthalf[i] < righthalf[j]:
-                nlist[k]=lefthalf[i]
-                i=i+1
-            else:
-                nlist[k]=righthalf[j]
-                j=j+1
-            k=k+1
 
-        while i < len(lefthalf):
-            nlist[k]=lefthalf[i]
-            i=i+1
-            k=k+1
-
-        while j < len(righthalf):
-            nlist[k]=righthalf[j]
-            j=j+1
-            k=k+1
-    print("Merging ",nlist)
-
-nlist = [14,46,43,27,57,41,45,21,70]
-mergeSort(nlist)
-print(nlist)
+#Contributed by Anant Chaudhary
