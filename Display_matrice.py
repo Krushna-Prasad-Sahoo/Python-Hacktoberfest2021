@@ -1,22 +1,39 @@
-a=[]
-n=int(input())
-print("Enter the element ::>")
-for i in range(n):
-    row=[]
-    for j in range(n):
-        row.append(int(input()))
-    a.append(row)
-print(a)
-print("Display Array In Matrix Form")
-for i in range(n):
-   for j in range(n):
-      print(a[i][j], end=" ")                  #new line
-   print()
-b=[]
-for i in range(n):
-    row=[]
-    for j in range(n):
-        row.append(int(input()))
-    b.append(row)
-print(b)
+R = int(input("Enter the number of rows:"))
+
+C = int(input("Enter the number of columns:"))
+
+  
+
+# Initialize matrix
+
+matrix = []
+
+print("Enter the entries rowwise:")
+
+  
+
+# For user input
+
+for i in range(R):          # A for loop for row entries
+
+    a =[]
+
+    for j in range(C):      # A for loop for column entries
+
+         a.append(int(input()))
+
+    matrix.append(a)
+
+  
+
+# For printing the matrix
+
+for i in range(R):
+
+    for j in range(C):
+
+        print(matrix[i][j], end = " ")
+
+    print()
+
 
