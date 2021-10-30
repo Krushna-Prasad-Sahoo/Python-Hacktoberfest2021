@@ -1,0 +1,14 @@
+import math
+def get_lcm(n1,n2):
+  #find gcd
+  gcd = math.gcd(n1,n2)
+  
+  #formula
+  result = (n1*n2)/gcd
+  return result
+  
+n1 = 12
+n2  = 20
+ 
+lcm = get_lcm(n1,n2)
+print("least common multiple  =  ", lcm)
