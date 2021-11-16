@@ -14,7 +14,7 @@ def arp_scan(iface, ip_range):
 
     packet = ether_layer/arp_layer
 
-    #Sending and recieving packets here
+    # Sending and recieving packets here
     ans, unans = srp(packet, iface=iface, timeout=2, inter=0.1)
 
     for snd, rcv in ans:
